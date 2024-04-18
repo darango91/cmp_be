@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cmp-be"
+version = "0.1.0"
+description = ""
+authors = ["Diego Arango <crash.diego91@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.4"
+djangorestframework = "^3.15.1"
+markdown = "^3.6"
+django-filter = "^24.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
