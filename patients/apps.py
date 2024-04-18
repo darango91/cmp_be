@@ -6,5 +6,5 @@ from django.apps import AppConfig
 
 class PatientsAppConfig(AppConfig):
     """Patients app config"""
-    name = 'cmp.patients'
+    name = 'patients'
     verbose_name = 'Patients App'
