@@ -13,8 +13,6 @@ class ClinicHistory(CMPModel):
     """Clinic history model
 
     A model that contains the relationship between the Patient and the Company
-    TODO:
-        Create the ClinicHistoryItems model that will contain the clinical information for the patient
     """
 
     patient = models.ForeignKey(
