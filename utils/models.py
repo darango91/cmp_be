@@ -64,13 +64,6 @@ class CMPPersonModel(CMPModel):
         blank=True
     )
 
-    REQUIRED_FIELDS = [
-        'personal_id',
-        'first_name',
-        'last_name',
-        'birthday',
-    ]
-
     class Meta:
         """
         Meta options
