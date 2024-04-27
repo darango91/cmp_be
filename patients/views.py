@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 # Models and Serializers
-from patients.models import Patient
+from patients.models.patients import Patient
 from patients.serializers import PatientSerializer
 
 
