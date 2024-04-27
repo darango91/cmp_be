@@ -1,4 +1,4 @@
-# Cuidate Mas Pro - Backend Repo
+# Cuidate Mas Pro - Python Backend Repo
 
 This repository contains the backend code for the Cuidate Mas Pro project. It is built using Python and Django.
 
