@@ -1,10 +1,8 @@
-"""Clinic histories model"""
-
 # Django
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 # Models
+from companies.models import Company
 from patients.models.patients import Patient
 
 # Utilities
@@ -15,15 +13,10 @@ class ClinicHistory(CMPModel):
     """Clinic history model
 
     A model that contains the relationship between the Patient and the Company
-    TODO:
-        Create the ClinicHistoryItems model that will contain the clinical information for the patient
     """
 
     patient = models.ForeignKey(
-        Patient,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
+        Patient, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     class Meta:
@@ -36,11 +29,12 @@ class ClinicHistoryItems(CMPModel):
     A model that contains the clinical information for the patient
     """
 
+    company = models.ForeignKey(
+        Company, on_delete=models.SET_NULL, null=True, blank=True
+    )
+
     clinic_history = models.ForeignKey(
-        ClinicHistory,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
+        ClinicHistory, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     class Meta:

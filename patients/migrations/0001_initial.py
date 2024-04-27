@@ -48,7 +48,10 @@ class Migration(migrations.Migration):
                 ("phone_number", models.CharField(blank=True, max_length=17)),
                 ("first_name", models.CharField(max_length=100)),
                 ("last_name", models.CharField(max_length=100)),
-                ("birthday", models.DateField(verbose_name="Patient birthday date")),
+                (
+                    "birthday",
+                    models.DateField(verbose_name="Patient birthday date"),
+                ),
                 (
                     "email",
                     models.EmailField(
