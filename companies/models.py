@@ -17,9 +17,9 @@ class Company(CMPModel):
         max_length=12,
         unique=True,
         error_messages={
-            'unique': _('A Company with the same business ID already exists')
+            "unique": _("A Company with the same business ID already exists")
         },
-        primary_key=True
+        primary_key=True,
     )
 
     email = models.EmailField(
@@ -28,7 +28,9 @@ class Company(CMPModel):
     )
 
     phone_number = models.CharField(max_length=20, blank=True)
-    logo = models.ImageField(upload_to='companies/logos', blank=True, null=True)
+    logo = models.ImageField(
+        upload_to="companies/logos", blank=True, null=True
+    )
 
     address = models.CharField(max_length=40)
     city = models.CharField(max_length=40)
@@ -37,7 +39,8 @@ class Company(CMPModel):
 
     class Meta(CMPModel.Meta):
         """Meta class."""
-        ordering = ['-name', '-business_id']
+
+        ordering = ["-name", "-business_id"]
 
     def __str__(self):
         """Return username"""

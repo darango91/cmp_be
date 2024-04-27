@@ -1,5 +1,3 @@
-"""Clinic histories model"""
-
 # Django
 from django.db import models
 
@@ -20,10 +18,7 @@ class ClinicHistory(CMPModel):
     """
 
     patient = models.ForeignKey(
-        Patient,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
+        Patient, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     class Meta:
@@ -37,17 +32,11 @@ class ClinicHistoryItems(CMPModel):
     """
 
     company = models.ForeignKey(
-        Company,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
+        Company, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     clinic_history = models.ForeignKey(
-        ClinicHistory,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
+        ClinicHistory, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     class Meta:

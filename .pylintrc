@@ -1,7 +1,7 @@
 [MASTER]
 profile=no
 persistent=yes
-ignore=tests.py, urls.py, migrations/
+ignore=tests.py, urls.py, */migrations
 cache-size=500
 
 [MESSAGES CONTROL]
