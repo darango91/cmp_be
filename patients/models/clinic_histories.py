@@ -2,9 +2,9 @@
 
 # Django
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 # Models
+from companies.models import Company
 from patients.models.patients import Patient
 
 # Utilities
@@ -35,6 +35,13 @@ class ClinicHistoryItems(CMPModel):
 
     A model that contains the clinical information for the patient
     """
+
+    company = models.ForeignKey(
+        Company,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
 
     clinic_history = models.ForeignKey(
         ClinicHistory,
