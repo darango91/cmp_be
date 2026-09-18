@@ -16,10 +16,12 @@ To set up the project on your local machine, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
-3. Install Poetry if you haven't already. You can do this by running `pip install poetry`.
-4. Install the required dependencies with `poetry install`.
-5. Activate the virtual environment with `poetry shell`.
-6. Run the server with `python manage.py runserver`.
+3. Install [uv](https://docs.astral.sh/uv/) if you haven't already (e.g. `curl -LsSf https://astral.sh/uv/install.sh | sh`).
+4. Install the required dependencies with `uv sync`. This creates a `.venv` and installs everything from `uv.lock`.
+5. Apply database migrations with `uv run python manage.py migrate`.
+6. Run the server with `uv run python manage.py runserver`.
+
+Prefix any management command with `uv run` (e.g. `uv run python manage.py makemigrations`), or activate the environment first with `source .venv/bin/activate`.
 
 ## Contributing
 
